@@ -7,12 +7,9 @@ def softmax(x):
     For 2D, compute row-wise softmax.
     """
     # Write code here
-    print(np.max(x,axis=-1 , keepdims=True))
-    ex = np.exp(x-np.max(x,axis=-1, keepdims=True))
-    print(ex)
-    sumex= np.sum(ex,axis=-1, keepdims=True)
-    print(sumex)
-    smax = ex/sumex
-    print(smax)
-    return smax
-    pass
+    x = np.array(x)
+    mex = np.max(x, axis=-1, keepdims=True)
+    ex = np.exp(x-mex)
+    sumex = np.sum(ex, axis=-1, keepdims=True)
+    return ex/sumex
+    
