@@ -13,3 +13,8 @@ def matrix_trace(A):
         sum += A[i,i]
     print("sum: ", sum)
     return sum
+
+    # Direct methods
+    # np.trace(A)
+    # A.diagonal().sum()
+
